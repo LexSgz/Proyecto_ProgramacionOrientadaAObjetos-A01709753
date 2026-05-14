@@ -1,4 +1,4 @@
-# Proyecto Integrador POO - Sistema de Gimnasio
+# Proyecto Integrador - Sistema para Gimnasio
 
 ## Descripción
 
