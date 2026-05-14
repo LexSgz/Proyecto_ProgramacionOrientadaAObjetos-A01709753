@@ -21,7 +21,7 @@ El sistema permite:
 
 ---
 
-# Conceptos de Programación Orientada a Objetos utilizados
+# Conceptos utilizados
 
 ## Herencia
 Las clases Cliente y Entrenador heredan de la clase abstracta Persona.
@@ -55,7 +55,7 @@ Algunos métodos pueden recibir diferentes parámetros dependiendo de la acción
 
 ---
 
-# Casos donde el sistema podría fallar
+# Donde podría fallar
 
 - Registro de usuarios con datos vacíos
 - Pagos inválidos
