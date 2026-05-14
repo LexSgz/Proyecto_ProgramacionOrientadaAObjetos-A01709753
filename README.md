@@ -64,24 +64,4 @@ Algunos métodos pueden recibir diferentes parámetros dependiendo de la acción
 - Rutinas inexistentes
 - Información eliminada accidentalmente
 
----
 
-# UML
-
-El proyecto utiliza un diagrama UML para representar la relación entre las clases del sistema.
-
-La clase principal es Persona, de la cual heredan Cliente y Entrenador. Además, Cliente se relaciona con Membresia, Rutina y Pago.
-
----
-
-# Compilación
-
-```bash
-g++ main.cpp -o gimnasio
-```
-
-# Ejecución
-
-```bash
-./gimnasio
-```
