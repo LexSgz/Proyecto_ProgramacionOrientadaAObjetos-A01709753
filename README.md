@@ -64,4 +64,43 @@ Algunos métodos pueden recibir diferentes parámetros dependiendo de la acción
 - Rutinas inexistentes
 - Información eliminada accidentalmente
 
+- # Segundo Avance Proyecto Integrador POO
+
+## Sistema de Gimnasio
+
+Proyecto desarrollado en C++ utilizando Programación Orientada a Objetos.
+
+### Conceptos implementados
+
+### Herencia
+Las clases Cliente y Entrenador heredan de Persona.
+
+### Modificadores de acceso
+
+- private
+- protected
+- public
+
+### Sobreescritura
+
+Las clases hijas sobrescriben el método virtual:
+
+mostrarInformacion()
+
+### Sobrecarga
+
+La clase Pago implementa:
+
+procesarPago(double cantidad)
+
+procesarPago(double cantidad, string metodo)
+
+### Archivos del proyecto
+
+- persona.h
+- cliente.h
+- entrenador.h
+- pago.h
+- main.cpp
+
 
