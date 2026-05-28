@@ -7,6 +7,7 @@ using namespace std;
 class Persona {
 
 protected:
+
     string nombre;
     int edad;
     int identificador;
@@ -17,17 +18,34 @@ public:
         string nombrePersona,
         int edadPersona,
         int idPersona
-    );
+    ){
 
-    virtual void mostrarInformacion() = 0;
+        nombre=nombrePersona;
+        edad=edadPersona;
+        identificador=idPersona;
+    }
 
-    string getNombre();
+    virtual void mostrarInformacion()=0;
 
-    int getEdad();
+    string getNombre(){
 
-    int getID();
+        return nombre;
+    }
 
-    void setNombre(string nuevoNombre);
+    int getEdad(){
+
+        return edad;
+    }
+
+    int getID(){
+
+        return identificador;
+    }
+
+    void setNombre(string nuevoNombre){
+
+        nombre=nuevoNombre;
+    }
 
 };
 
