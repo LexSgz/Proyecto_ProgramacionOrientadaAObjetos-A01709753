@@ -1,34 +1,53 @@
-
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
 #include "persona.h"
 
-class Cliente: public Persona {
+class Cliente : public Persona {
 
 private:
+
     double pagosPendientes;
 
 public:
 
-    Cliente(string n,int e,int i,double p)
-    : Persona(n,e,i){
+    Cliente(
+        string nombrePersona,
+        int edadPersona,
+        int idPersona,
+        double deudaCliente
+    )
 
-        pagosPendientes=p;
+    : Persona(
+        nombrePersona,
+        edadPersona,
+        idPersona
+    ){
+
+        pagosPendientes=deudaCliente;
     }
 
     void mostrarInformacion() override {
 
-        cout<<"Cliente"<<endl;
-        cout<<"Nombre: "<<nombre<<endl;
-        cout<<"Edad: "<<edad<<endl;
-        cout<<"ID: "<<id<<endl;
-        cout<<"Pagos pendientes: "<<pagosPendientes<<endl;
+        cout<<"----- CLIENTE -----"<<endl;
+
+        cout<<"Nombre: "
+            <<getNombre()
+            <<endl;
+
+        cout<<"Edad: "
+            <<getEdad()
+            <<endl;
+
+        cout<<"ID: "
+            <<getID()
+            <<endl;
+
+        cout<<"Pagos pendientes: "
+            <<pagosPendientes
+            <<endl;
     }
 
 };
 
 #endif
-//
-// Created by alexs on 20/05/2026.
-//
