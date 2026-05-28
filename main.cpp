@@ -1,5 +1,6 @@
 #include "cliente.h"
 #include "entrenador.h"
+#include "pago.h"
 
 int main(){
 
@@ -21,18 +22,28 @@ int main(){
     Persona* personas[2];
 
     personas[0]=&clienteUno;
-
     personas[1]=&entrenadorUno;
 
-    for(int indice=0;
-        indice<2;
-        indice++){
+    for(int i=0;i<2;i++){
 
-        personas[indice]
-            ->mostrarInformacion();
+        personas[i]
+        ->mostrarInformacion();
 
         cout<<endl;
     }
+
+    Pago pagoCliente;
+
+    pagoCliente
+        .procesarPago(1000);
+
+    cout<<endl;
+
+    pagoCliente
+        .procesarPago(
+            1500,
+            "Tarjeta"
+        );
 
     return 0;
 }
