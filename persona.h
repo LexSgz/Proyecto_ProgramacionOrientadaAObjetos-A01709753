@@ -9,17 +9,25 @@ class Persona {
 protected:
     string nombre;
     int edad;
-    int id;
+    int identificador;
 
 public:
 
-    Persona(string n,int e,int i){
-        nombre=n;
-        edad=e;
-        id=i;
-    }
+    Persona(
+        string nombrePersona,
+        int edadPersona,
+        int idPersona
+    );
 
-    virtual void mostrarInformacion()=0;
+    virtual void mostrarInformacion() = 0;
+
+    string getNombre();
+
+    int getEdad();
+
+    int getID();
+
+    void setNombre(string nuevoNombre);
 
 };
 
