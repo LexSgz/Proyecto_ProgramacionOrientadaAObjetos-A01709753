@@ -1,12 +1,16 @@
 #include "cliente.h"
 #include "entrenador.h"
-#include "pago.h"
 
-int main() {
+int main(){
 
-    Cliente c1("Alex",19,101,500);
+    Cliente clienteUno(
+        "Alex",
+        19,
+        101,
+        500
+    );
 
-    Entrenador e1(
+    Entrenador entrenadorUno(
         "Carlos",
         32,
         202,
@@ -14,24 +18,21 @@ int main() {
         18000
     );
 
-    c1.mostrarInformacion();
+    Persona* personas[2];
 
-    cout<<endl;
+    personas[0]=&clienteUno;
 
-    e1.mostrarInformacion();
+    personas[1]=&entrenadorUno;
 
-    cout<<endl;
+    for(int indice=0;
+        indice<2;
+        indice++){
 
-    Pago p1;
+        personas[indice]
+            ->mostrarInformacion();
 
-    p1.procesarPago(1000);
-
-    cout<<endl;
-
-    p1.procesarPago(
-        1500,
-        "Tarjeta"
-    );
+        cout<<endl;
+    }
 
     return 0;
 }
