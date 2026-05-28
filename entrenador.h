@@ -3,29 +3,57 @@
 
 #include "persona.h"
 
-class Entrenador: public Persona {
+class Entrenador : public Persona {
 
 private:
+
     string especialidad;
     double salario;
 
 public:
 
-    Entrenador(string n,int e,int i,string esp,double s)
-    : Persona(n,e,i){
+    Entrenador(
+        string nombrePersona,
+        int edadPersona,
+        int idPersona,
+        string especialidadEntrenador,
+        double salarioEntrenador
+    )
 
-        especialidad=esp;
-        salario=s;
+    : Persona(
+        nombrePersona,
+        edadPersona,
+        idPersona
+    ){
+
+        especialidad=especialidadEntrenador;
+
+        salario=salarioEntrenador;
     }
 
     void mostrarInformacion() override {
 
-        cout<<"Entrenador"<<endl;
-        cout<<"Nombre: "<<nombre<<endl;
-        cout<<"Edad: "<<edad<<endl;
-        cout<<"ID: "<<id<<endl;
-        cout<<"Especialidad: "<<especialidad<<endl;
-        cout<<"Salario: "<<salario<<endl;
+        cout<<"----- ENTRENADOR -----"<<endl;
+
+        cout<<"Nombre: "
+            <<getNombre()
+            <<endl;
+
+        cout<<"Edad: "
+            <<getEdad()
+            <<endl;
+
+        cout<<"ID: "
+            <<getID()
+            <<endl;
+
+        cout<<"Especialidad: "
+            <<especialidad
+            <<endl;
+
+        cout<<"Salario: "
+            <<salario
+            <<endl;
     }
 
 };
