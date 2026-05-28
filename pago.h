@@ -7,24 +7,59 @@ using namespace std;
 class Pago {
 
 private:
-    double monto;
+
+    double montoPago;
+    string metodoPago;
 
 public:
 
     Pago(){
 
-        monto=0;
+        montoPago=0;
+        metodoPago="No definido";
     }
 
-    void procesarPago(double cantidad){
+    // SOBRECARGA 1
+    void procesarPago(double cantidadPago){
 
-        cout<<"Pago realizado: "<<cantidad<<endl;
+        montoPago=cantidadPago;
+
+        cout<<"Pago registrado."<<endl;
+
+        cout<<"Monto: "
+            <<montoPago
+            <<endl;
     }
 
-    void procesarPago(double cantidad,string metodo){
+    // SOBRECARGA 2
+    void procesarPago(
+        double cantidadPago,
+        string metodoSeleccionado
+    ){
 
-        cout<<"Pago realizado: "<<cantidad<<endl;
-        cout<<"Metodo: "<<metodo<<endl;
+        montoPago=cantidadPago;
+
+        metodoPago=metodoSeleccionado;
+
+        cout<<"Pago registrado."<<endl;
+
+        cout<<"Monto: "
+            <<montoPago
+            <<endl;
+
+        cout<<"Metodo: "
+            <<metodoPago
+            <<endl;
+    }
+
+    double getMontoPago(){
+
+        return montoPago;
+    }
+
+    string getMetodoPago(){
+
+        return metodoPago;
     }
 
 };
