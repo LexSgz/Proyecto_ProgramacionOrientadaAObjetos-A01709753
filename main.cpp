@@ -2,7 +2,7 @@
 #include "entrenador.h"
 #include "pago.h"
 
-int main(){
+int main() {
 
     Cliente clienteUno(
         "Alex",
@@ -21,29 +21,37 @@ int main(){
 
     Persona* personas[2];
 
-    personas[0]=&clienteUno;
-    personas[1]=&entrenadorUno;
+    personas[0] = &clienteUno;
+    personas[1] = &entrenadorUno;
 
-    for(int i=0;i<2;i++){
+    cout << "=== POLIMORFISMO ==="
+         << endl
+         << endl;
+
+    for (int i = 0; i < 2; i++) {
 
         personas[i]
-        ->mostrarInformacion();
+            ->mostrarInformacion();
 
-        cout<<endl;
+        cout << endl;
     }
+
+    cout << "=== SOBRECARGA ==="
+         << endl
+         << endl;
 
     Pago pagoCliente;
 
-    pagoCliente
-        .procesarPago(1000);
+    pagoCliente.procesarPago(
+        1000
+    );
 
-    cout<<endl;
+    cout << endl;
 
-    pagoCliente
-        .procesarPago(
-            1500,
-            "Tarjeta"
-        );
+    pagoCliente.procesarPago(
+        1500,
+        "Tarjeta"
+    );
 
     return 0;
 }
