@@ -3,6 +3,8 @@
 
 #include "persona.h"
 
+// Cliente es clase que hereda de Persona.
+
 class Cliente : public Persona {
 
 private:
@@ -38,10 +40,14 @@ public:
         pagosPendientes = nuevaDeuda;
     }
 
+// Sobreescritura del método abstracto en persona 
+
     void mostrarInformacion() override {
 
         cout << "----- CLIENTE -----" << endl;
 
+// Se reutiliza el método heredado de Persona 
+        
         mostrarDatosBasicos();
 
         cout << "Pagos pendientes: "
