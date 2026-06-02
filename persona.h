@@ -4,6 +4,9 @@
 #include <iostream>
 using namespace std;
 
+// Clase abstracta
+// Define los atributos y comportamientos comunes para todas las personas del sistema.
+
 class Persona {
 
 protected:
@@ -23,6 +26,9 @@ public:
       edad(edadPersona),
       identificador(idPersona)
     {}
+
+// Destructor virtual.
+// lo uso para destruir a los objetos hijos cuando se utilizan apuntadores a Persona.
 
     virtual ~Persona() {}
 
@@ -70,6 +76,9 @@ public:
              << identificador
              << endl;
     }
+
+// Método virtual puro.
+// Convierte a Persona en una clase abstracta, hace que las clases hijas implementen su propia versión del método.
 
     virtual void mostrarInformacion() = 0;
 };
