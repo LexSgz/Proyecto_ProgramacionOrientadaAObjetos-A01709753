@@ -62,6 +62,9 @@ public:
         identificador = nuevoID;
     }
 
+// Método reutilizable y heredado.
+// Evita que se duplique el código en Cliente y en Entrenador 
+
     void mostrarDatosBasicos() {
 
         cout << "Nombre: "
