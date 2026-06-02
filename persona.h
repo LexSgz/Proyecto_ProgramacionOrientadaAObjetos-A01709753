@@ -18,35 +18,60 @@ public:
         string nombrePersona,
         int edadPersona,
         int idPersona
-    ){
+    )
+    : nombre(nombrePersona),
+      edad(edadPersona),
+      identificador(idPersona)
+    {}
 
-        nombre=nombrePersona;
-        edad=edadPersona;
-        identificador=idPersona;
-    }
+    virtual ~Persona() {}
 
-    virtual void mostrarInformacion()=0;
-
-    string getNombre(){
+    string getNombre() {
 
         return nombre;
     }
 
-    int getEdad(){
+    int getEdad() {
 
         return edad;
     }
 
-    int getID(){
+    int getID() {
 
         return identificador;
     }
 
-    void setNombre(string nuevoNombre){
+    void setNombre(string nuevoNombre) {
 
-        nombre=nuevoNombre;
+        nombre = nuevoNombre;
     }
 
+    void setEdad(int nuevaEdad) {
+
+        edad = nuevaEdad;
+    }
+
+    void setID(int nuevoID) {
+
+        identificador = nuevoID;
+    }
+
+    void mostrarDatosBasicos() {
+
+        cout << "Nombre: "
+             << nombre
+             << endl;
+
+        cout << "Edad: "
+             << edad
+             << endl;
+
+        cout << "ID: "
+             << identificador
+             << endl;
+    }
+
+    virtual void mostrarInformacion() = 0;
 };
 
 #endif
