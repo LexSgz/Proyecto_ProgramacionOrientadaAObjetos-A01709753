@@ -3,6 +3,9 @@
 
 #include "persona.h"
 
+// Entrenador hereda de Persona 
+// Usa atributos comunes y agrega información específica
+
 class Entrenador : public Persona {
 
 private:
@@ -54,6 +57,8 @@ public:
 
         salario = nuevoSalario;
     }
+
+// Usa de forma propia el metodo abstracto heredado de Persona
 
     void mostrarInformacion() override {
 
