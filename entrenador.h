@@ -24,36 +24,50 @@ public:
         nombrePersona,
         edadPersona,
         idPersona
-    ){
+    ),
+      especialidad(especialidadEntrenador),
+      salario(salarioEntrenador)
+    {}
 
-        especialidad=especialidadEntrenador;
+    ~Entrenador() override {}
 
-        salario=salarioEntrenador;
+    string getEspecialidad() {
+
+        return especialidad;
+    }
+
+    double getSalario() {
+
+        return salario;
+    }
+
+    void setEspecialidad(
+        string nuevaEspecialidad
+    ) {
+
+        especialidad = nuevaEspecialidad;
+    }
+
+    void setSalario(
+        double nuevoSalario
+    ) {
+
+        salario = nuevoSalario;
     }
 
     void mostrarInformacion() override {
 
-        cout<<"----- ENTRENADOR -----"<<endl;
+        cout << "----- ENTRENADOR -----" << endl;
 
-        cout<<"Nombre: "
-            <<getNombre()
-            <<endl;
+        mostrarDatosBasicos();
 
-        cout<<"Edad: "
-            <<getEdad()
-            <<endl;
+        cout << "Especialidad: "
+             << especialidad
+             << endl;
 
-        cout<<"ID: "
-            <<getID()
-            <<endl;
-
-        cout<<"Especialidad: "
-            <<especialidad
-            <<endl;
-
-        cout<<"Salario: "
-            <<salario
-            <<endl;
+        cout << "Salario: "
+             << salario
+             << endl;
     }
 
 };
