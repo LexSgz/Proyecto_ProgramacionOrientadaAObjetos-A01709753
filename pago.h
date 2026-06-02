@@ -19,7 +19,9 @@ public:
         metodoPago = "No definido";
     }
 
-    // Sobrecarga 1
+// Sobrecarga de los métodos.
+// el primer procesarpago() solo recibe el monto.
+
     void procesarPago(
         double cantidadPago
     ) {
@@ -34,7 +36,9 @@ public:
              << endl;
     }
 
-    // Sobrecarga 2
+// Sobrecarga de métodos.
+// El segundo procesarpago() recibe monto y método de pago.
+
     void procesarPago(
         double cantidadPago,
         string metodoSeleccionado
