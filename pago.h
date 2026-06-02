@@ -13,53 +13,70 @@ private:
 
 public:
 
-    Pago(){
+    Pago() {
 
-        montoPago=0;
-        metodoPago="No definido";
+        montoPago = 0;
+        metodoPago = "No definido";
     }
 
-    // SOBRECARGA 1
-    void procesarPago(double cantidadPago){
+    // Sobrecarga 1
+    void procesarPago(
+        double cantidadPago
+    ) {
 
-        montoPago=cantidadPago;
+        montoPago = cantidadPago;
 
-        cout<<"Pago registrado."<<endl;
+        cout << "Pago registrado."
+             << endl;
 
-        cout<<"Monto: "
-            <<montoPago
-            <<endl;
+        cout << "Monto: "
+             << montoPago
+             << endl;
     }
 
-    // SOBRECARGA 2
+    // Sobrecarga 2
     void procesarPago(
         double cantidadPago,
         string metodoSeleccionado
-    ){
+    ) {
 
-        montoPago=cantidadPago;
+        montoPago = cantidadPago;
+        metodoPago = metodoSeleccionado;
 
-        metodoPago=metodoSeleccionado;
+        cout << "Pago registrado."
+             << endl;
 
-        cout<<"Pago registrado."<<endl;
+        cout << "Monto: "
+             << montoPago
+             << endl;
 
-        cout<<"Monto: "
-            <<montoPago
-            <<endl;
-
-        cout<<"Metodo: "
-            <<metodoPago
-            <<endl;
+        cout << "Metodo: "
+             << metodoPago
+             << endl;
     }
 
-    double getMontoPago(){
+    double getMontoPago() {
 
         return montoPago;
     }
 
-    string getMetodoPago(){
+    string getMetodoPago() {
 
         return metodoPago;
+    }
+
+    void setMontoPago(
+        double nuevoMonto
+    ) {
+
+        montoPago = nuevoMonto;
+    }
+
+    void setMetodoPago(
+        string nuevoMetodo
+    ) {
+
+        metodoPago = nuevoMetodo;
     }
 
 };
