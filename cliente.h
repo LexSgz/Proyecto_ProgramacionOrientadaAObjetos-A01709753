@@ -22,30 +22,31 @@ public:
         nombrePersona,
         edadPersona,
         idPersona
-    ){
+    ),
+      pagosPendientes(deudaCliente)
+    {}
 
-        pagosPendientes=deudaCliente;
+    ~Cliente() override {}
+
+    double getPagosPendientes() {
+
+        return pagosPendientes;
+    }
+
+    void setPagosPendientes(double nuevaDeuda) {
+
+        pagosPendientes = nuevaDeuda;
     }
 
     void mostrarInformacion() override {
 
-        cout<<"----- CLIENTE -----"<<endl;
+        cout << "----- CLIENTE -----" << endl;
 
-        cout<<"Nombre: "
-            <<getNombre()
-            <<endl;
+        mostrarDatosBasicos();
 
-        cout<<"Edad: "
-            <<getEdad()
-            <<endl;
-
-        cout<<"ID: "
-            <<getID()
-            <<endl;
-
-        cout<<"Pagos pendientes: "
-            <<pagosPendientes
-            <<endl;
+        cout << "Pagos pendientes: "
+             << pagosPendientes
+             << endl;
     }
 
 };
