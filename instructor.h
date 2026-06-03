@@ -3,8 +3,8 @@
 
 #include "persona.h"
 
-// Instructor hereda de Persona.
-// Representa a los maestros del estudio.
+// Hereda de Persona.
+// Son los maestros del estudio de danza
 
 class Instructor : public Persona {
 
@@ -15,10 +15,13 @@ private:
 
 public:
 
+// Constructor de Instructor.
+// Inicializa los datos heredados y propios.
+
     Instructor(
         string nombrePersona,
         int edadPersona,
-        int idPersona,
+        int idPersona, //-^
         string especialidadInstructor,
         double salarioInstructor
     )
@@ -54,11 +57,14 @@ public:
         salario = nuevoSalario;
     }
 
-    // Sobreescritura
+// Sobreescritura del método abstracto.
+// Cada Instructor muestra su información específica.
+
     void mostrarInformacion() override {
 
         cout << "----- INSTRUCTOR -----" << endl;
 
+        // Reusa el método heredado
         mostrarDatosBasicos();
 
         cout << "Especialidad: "
