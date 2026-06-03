@@ -1,11 +1,11 @@
-#ifndef CLIENTE_H
-#define CLIENTE_H
+#ifndef ALUMNO_H
+#define ALUMNO_H
 
 #include "persona.h"
 
-// Cliente es clase que hereda de Persona.
+// hereda de Persona , la clase representa a los estudiantes inscritos en el estudio de danza.
 
-class Cliente : public Persona {
+class Alumno : public Persona {
 
 private:
 
@@ -13,11 +13,11 @@ private:
 
 public:
 
-    Cliente(
+    Alumno(
         string nombrePersona,
         int edadPersona,
         int idPersona,
-        double deudaCliente
+        double deudaAlumno
     )
 
     : Persona(
@@ -25,29 +25,26 @@ public:
         edadPersona,
         idPersona
     ),
-      pagosPendientes(deudaCliente)
+      pagosPendientes(deudaAlumno)
     {}
 
-    ~Cliente() override {}
+    ~Alumno() override {}
 
     double getPagosPendientes() {
-
         return pagosPendientes;
     }
 
-    void setPagosPendientes(double nuevaDeuda) {
-
+    void setPagosPendientes(
+        double nuevaDeuda
+    ) {
         pagosPendientes = nuevaDeuda;
     }
 
-// Sobreescritura del método abstracto en persona 
-
+    // Sobreescritura
     void mostrarInformacion() override {
 
-        cout << "----- CLIENTE -----" << endl;
+        cout << "----- ALUMNO -----" << endl;
 
-// Se reutiliza el método heredado de Persona 
-        
         mostrarDatosBasicos();
 
         cout << "Pagos pendientes: "
