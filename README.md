@@ -47,9 +47,9 @@ Los atributos de las clases se encuentran protegidos mediante modificadores de a
 
 Las clases `Alumno` e `Instructor` implementan su propia versión del método:
 
-```cpp
+
 mostrarInformacion()
-```
+
 
 utilizando la palabra reservada `override`.
 
@@ -57,13 +57,11 @@ utilizando la palabra reservada `override`.
 
 La clase `Pago` implementa dos versiones del método:
 
-```cpp
-procesarPago(double cantidadPago)
-```
 
-```cpp
+procesarPago(double cantidadPago)
+
 procesarPago(double cantidadPago, string metodoSeleccionado)
-```
+
 
 demostrando el concepto de sobrecarga.
 
@@ -105,20 +103,5 @@ El sistema está compuesto por una jerarquía de herencia donde:
 
 ---
 
-## Compilación
-
-```bash
-g++ main.cpp -o estudioDanza
-```
-
-## Ejecución
-
-```bash
-./estudioDanza
-```
-
----
-
-## Autor
 
 Proyecto desarrollado como parte del Proyecto Integrador de Programación Orientada a Objetos.
