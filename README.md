@@ -35,9 +35,8 @@ Se utilizan apuntadores a la clase base `Persona` para almacenar objetos de tipo
 
 La clase `Persona` es una clase abstracta porque contiene el método virtual puro:
 
-```cpp
+
 virtual void mostrarInformacion() = 0;
-```
 
 ### Encapsulamiento
 
