@@ -1,106 +1,124 @@
-# Proyecto Integrador - Sistema para Gimnasio
+# Proyecto Integrador POO - Sistema para Estudio de Danza
 
 ## Descripción
 
-Este proyecto consiste en el desarrollo de un sistema de administración para un gimnasio utilizando Programación Orientada a Objetos en C++.
+Este proyecto consiste en el desarrollo de un sistema de administración para un estudio de danza utilizando Programación Orientada a Objetos en C++.
 
-El sistema permite administrar clientes, entrenadores, membresías, rutinas y pagos mediante una estructura de clases organizada.
+El sistema permite administrar alumnos, instructores y pagos mediante una estructura de clases organizada, aplicando conceptos fundamentales de Programación Orientada a Objetos como herencia, polimorfismo, encapsulamiento, sobrecarga, sobreescritura y clases abstractas.
 
 ---
 
-# Funcionalidad
+## Funcionalidad
 
 El sistema permite:
 
-- Registrar clientes
-- Registrar entrenadores
-- Administrar membresías
-- Asignar rutinas
-- Registrar pagos
-- Consultar información de usuarios
+* Registrar alumnos.
+* Registrar instructores.
+* Gestionar información de las personas registradas.
+* Registrar pagos realizados por los alumnos.
+* Consultar información de alumnos e instructores.
+* Aplicar polimorfismo para manejar diferentes tipos de personas dentro del sistema.
 
 ---
 
-# Conceptos utilizados
-
-## Herencia
-Las clases Cliente y Entrenador heredan de la clase abstracta Persona.
-
-## Polimorfismo
-El método mostrarInformacion() funciona de manera diferente dependiendo del tipo de objeto.
-
-## Clases abstractas
-La clase Persona es abstracta y sirve como base para otras clases.
-
-## Encapsulamiento
-Los atributos se manejan mediante modificadores de acceso privados y protegidos.
-
-## Sobreescritura de métodos
-Las clases hijas sobrescriben métodos heredados de Persona.
-
-## Sobrecarga
-Algunos métodos pueden recibir diferentes parámetros dependiendo de la acción realizada.
-
----
-
-# Estructura del Proyecto
-
-- persona.h
-- cliente.h
-- entrenador.h
-- membresia.h
-- rutina.h
-- pago.h
-- main.cpp
-
----
-
-# Donde podría fallar
-
-- Registro de usuarios con datos vacíos
-- Pagos inválidos
-- IDs duplicados
-- Membresías vencidas
-- Rutinas inexistentes
-- Información eliminada accidentalmente
-
-- # Segundo Avance Proyecto Integrador POO
-
-## Sistema de Gimnasio
-
-Proyecto desarrollado en C++ utilizando Programación Orientada a Objetos.
-
-### Conceptos implementados
+## Conceptos Implementados
 
 ### Herencia
-Las clases Cliente y Entrenador heredan de Persona.
 
-### Modificadores de acceso
+Las clases `Alumno` e `Instructor` heredan de la clase abstracta `Persona`.
 
-- private
-- protected
-- public
+### Polimorfismo
 
-### Sobreescritura
+Se utilizan apuntadores a la clase base `Persona` para almacenar objetos de tipo `Alumno` e `Instructor`, permitiendo ejecutar diferentes versiones del método `mostrarInformacion()`.
 
-Las clases hijas sobrescriben el método virtual:
+### Clases Abstractas
 
+La clase `Persona` es una clase abstracta porque contiene el método virtual puro:
+
+```cpp
+virtual void mostrarInformacion() = 0;
+```
+
+### Encapsulamiento
+
+Los atributos de las clases se encuentran protegidos mediante modificadores de acceso y son manipulados mediante getters y setters.
+
+### Sobreescritura de Métodos
+
+Las clases `Alumno` e `Instructor` implementan su propia versión del método:
+
+```cpp
 mostrarInformacion()
+```
 
-### Sobrecarga
+utilizando la palabra reservada `override`.
 
-La clase Pago implementa:
+### Sobrecarga de Métodos
 
-procesarPago(double cantidad)
+La clase `Pago` implementa dos versiones del método:
 
-procesarPago(double cantidad, string metodo)
+```cpp
+procesarPago(double cantidadPago)
+```
 
-### Archivos del proyecto
+```cpp
+procesarPago(double cantidadPago, string metodoSeleccionado)
+```
 
-- persona.h
-- cliente.h
-- entrenador.h
-- pago.h
-- main.cpp
+demostrando el concepto de sobrecarga.
 
+### Destructores Virtuales
 
+La clase `Persona` implementa un destructor virtual para asegurar una correcta liberación de memoria cuando se utilizan apuntadores a la clase base.
+
+---
+
+## Estructura del Proyecto
+
+* persona.h
+* alumno.h
+* instructor.h
+* pago.h
+* main.cpp
+
+---
+
+## Diagrama UML
+
+El sistema está compuesto por una jerarquía de herencia donde:
+
+* Persona es la clase abstracta principal.
+* Alumno hereda de Persona.
+* Instructor hereda de Persona.
+* Pago administra la información relacionada con los pagos realizados por los alumnos.
+
+---
+
+## Posibles Casos de Error
+
+* Registro de alumnos con datos vacíos.
+* Registro de instructores con información incompleta.
+* Pagos con cantidades inválidas.
+* Identificadores duplicados.
+* Información capturada incorrectamente por el usuario.
+* Modificaciones incorrectas de datos existentes.
+
+---
+
+## Compilación
+
+```bash
+g++ main.cpp -o estudioDanza
+```
+
+## Ejecución
+
+```bash
+./estudioDanza
+```
+
+---
+
+## Autor
+
+Proyecto desarrollado como parte del Proyecto Integrador de Programación Orientada a Objetos.
