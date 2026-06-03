@@ -3,7 +3,8 @@
 
 #include "persona.h"
 
-// hereda de Persona , la clase representa a los estudiantes inscritos en el estudio de danza.
+// hereda de Persona.
+// Son los estudiantes inscritos en el estudio de danza.
 
 class Alumno : public Persona {
 
@@ -13,10 +14,13 @@ private:
 
 public:
 
+// Constructor
+// Inicializa los datos heredados y los propios.
+
     Alumno(
         string nombrePersona,
-        int edadPersona,
-        int idPersona,
+        int edadPersona, 
+        int idPersona, //-
         double deudaAlumno
     )
 
@@ -40,11 +44,14 @@ public:
         pagosPendientes = nuevaDeuda;
     }
 
-    // Sobreescritura
+// Sobreescritura del método abstracto
+// Cada Alumno muestra información específica propia
+
     void mostrarInformacion() override {
 
         cout << "----- ALUMNO -----" << endl;
 
+        // reusa el método heredado
         mostrarDatosBasicos();
 
         cout << "Pagos pendientes: "
