@@ -1,12 +1,12 @@
-#ifndef ENTRENADOR_H
-#define ENTRENADOR_H
+#ifndef INSTRUCTOR_H
+#define INSTRUCTOR_H
 
 #include "persona.h"
 
-// Entrenador hereda de Persona 
-// Usa atributos comunes y agrega información específica
+// Instructor hereda de Persona.
+// Representa a los maestros del estudio.
 
-class Entrenador : public Persona {
+class Instructor : public Persona {
 
 private:
 
@@ -15,12 +15,12 @@ private:
 
 public:
 
-    Entrenador(
+    Instructor(
         string nombrePersona,
         int edadPersona,
         int idPersona,
-        string especialidadEntrenador,
-        double salarioEntrenador
+        string especialidadInstructor,
+        double salarioInstructor
     )
 
     : Persona(
@@ -28,41 +28,36 @@ public:
         edadPersona,
         idPersona
     ),
-      especialidad(especialidadEntrenador),
-      salario(salarioEntrenador)
+      especialidad(especialidadInstructor),
+      salario(salarioInstructor)
     {}
 
-    ~Entrenador() override {}
+    ~Instructor() override {}
 
     string getEspecialidad() {
-
         return especialidad;
     }
 
     double getSalario() {
-
         return salario;
     }
 
     void setEspecialidad(
         string nuevaEspecialidad
     ) {
-
         especialidad = nuevaEspecialidad;
     }
 
     void setSalario(
         double nuevoSalario
     ) {
-
         salario = nuevoSalario;
     }
 
-// Usa de forma propia el metodo abstracto heredado de Persona
-
+    // Sobreescritura
     void mostrarInformacion() override {
 
-        cout << "----- ENTRENADOR -----" << endl;
+        cout << "----- INSTRUCTOR -----" << endl;
 
         mostrarDatosBasicos();
 
