@@ -15,7 +15,7 @@ private:
 public:
 
 // Constructor
-// Inicializa los datos heredados y los propios.
+// Usa los datos heredados y los propios.
 
     Alumno(
         string nombrePersona,
