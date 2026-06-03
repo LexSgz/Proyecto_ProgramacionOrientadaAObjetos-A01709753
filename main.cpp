@@ -1,42 +1,37 @@
-#include "cliente.h"
-#include "entrenador.h"
+#include "alumno.h"
+#include "instructor.h"
 #include "pago.h"
 
 int main() {
 
-    Cliente clienteUno(
+    Alumno alumnoUno(
         "Alex",
         19,
         101,
         500
     );
 
-    Entrenador entrenadorUno(
-        "Carlos",
-        32,
+    Instructor instructorUno(
+        "Carla",
+        28,
         202,
-        "Musculacion",
+        "Ballet",
         18000
     );
-    
-// Uso de apuntadores a la clase base (Persona)
-// Permite almacenar objetos de diferentes tipos y usar Polimorfismo
-    
+
+    // Polimorfismo:
+    // Se almacenan objetos diferentes
+    // utilizando apuntadores a Persona.
+
     Persona* personas[2];
-    
-// los dos objetos se usan como Persona por la herencia de clase
-    
-    personas[0] = &clienteUno;
-    personas[1] = &entrenadorUno;
+
+    personas[0] = &alumnoUno;
+    personas[1] = &instructorUno;
 
     cout << "=== POLIMORFISMO ==="
-         << endl
-         << endl;
+         << endl << endl;
 
-// Polimorfismo.
-// hace que el mismo mensaje se envie a objetos distintos y cada objeto ejecuta su propia versión de mostrarInformacion().
-    
-    for (int i = 0; i < 2; i++) {
+    for(int i = 0; i < 2; i++) {
 
         personas[i]
             ->mostrarInformacion();
@@ -45,18 +40,17 @@ int main() {
     }
 
     cout << "=== SOBRECARGA ==="
-         << endl
-         << endl;
+         << endl << endl;
 
-    Pago pagoCliente;
+    Pago pagoAlumno;
 
-    pagoCliente.procesarPago(
+    pagoAlumno.procesarPago(
         1000
     );
 
     cout << endl;
 
-    pagoCliente.procesarPago(
+    pagoAlumno.procesarPago(
         1500,
         "Tarjeta"
     );
