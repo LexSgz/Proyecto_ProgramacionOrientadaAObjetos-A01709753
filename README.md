@@ -1,4 +1,4 @@
-# Proyecto Integrador POO - Estudio de Danza
+# Proyecto Integrador POO - Estudio de Danza ESTUDDIO
 
 ## Descripción
 
