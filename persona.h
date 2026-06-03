@@ -4,11 +4,8 @@
 #include <iostream>
 using namespace std;
 
-// Clase abstracta base.
-// Define los atributos y comportamientos comunes
-// para todas las personas del estudio de danza.
-
-class Persona {
+// Es la clase abstracta base.
+// Aqui se definen los atributos comunes para todas las personas del estudio de danza.
 
 protected:
 
@@ -28,6 +25,8 @@ public:
       identificador(idPersona)
     {}
 
+// el Destructor virtual.
+// permite destruir los objetos derivados cuando se utilizan apuntadores a la clase Persona
     virtual ~Persona() {}
 
     string getNombre() {
@@ -54,6 +53,9 @@ public:
         identificador = nuevoID;
     }
 
+// Método que se reusa y hereda
+// Evita que se duplique el código de Alumno e Instructor
+
     void mostrarDatosBasicos() {
 
         cout << "Nombre: " << nombre << endl;
@@ -61,8 +63,9 @@ public:
         cout << "ID: " << identificador << endl;
     }
 
-    // Método virtual puro.
-    // Convierte a Persona en una clase abstracta.
+// Método virtual puro / clase abstracta 
+// Convierte a Persona en clase abstracta y obliga a las clases hijas a implementar su propia versión de mostrarInformacion()
+
     virtual void mostrarInformacion() = 0;
 };
 
