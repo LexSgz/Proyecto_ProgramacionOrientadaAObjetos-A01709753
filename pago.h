@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+// Clase encargada de administrar la información de los pagos.
+
 class Pago {
 
 private:
