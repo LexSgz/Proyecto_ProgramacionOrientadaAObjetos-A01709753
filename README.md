@@ -101,6 +101,26 @@ El sistema está compuesto por una jerarquía de herencia donde:
 * Modificaciones incorrectas de datos existentes.
 
 ---
+## como ejecutar el programa
+
+* El programa corre en consola y está hecho con C++ estándar, por lo que puede correr en diferentes sistemas operativos.
+
+Para compilar el proyecto, primero se debe abrir una terminal dentro de la carpeta donde están los archivos del programa.
+
+Compilar con:
+
+g++ main.cpp -o estudioDanza
+
+Correr en Windows:
+
+.\estudioDanza.exe
+
+Correr en Linux o Mac:
+
+./hotel
+
+---
+
 
 
 Proyecto desarrollado como parte del Proyecto Integrador de Programación Orientada a Objetos.
