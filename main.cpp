@@ -28,8 +28,6 @@ int main() {
     personas[0] = &alumnoUno;
     personas[1] = &instructorUno;
 
-    cout << "=== POLIMORFISMO ==="
-         << endl << endl;
 
     for(int i = 0; i < 2; i++) {
 
@@ -38,9 +36,6 @@ int main() {
 
         cout << endl;
     }
-
-    cout << "=== SOBRECARGA ==="
-         << endl << endl;
 
     Pago pagoAlumno;
 
