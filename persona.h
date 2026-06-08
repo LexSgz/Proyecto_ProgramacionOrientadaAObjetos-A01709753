@@ -2,13 +2,11 @@
 #define PERSONA_H
 
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 // Es la clase abstracta base.
 // Aqui se definen los atributos comunes para todas las personas del estudio de danza.
-class Persona {
+class Persona{
 
 protected:
 
@@ -55,9 +53,8 @@ public:
     void setID(int nuevoID) {
         identificador = nuevoID;
     }
-
-// Método que se reusa y hereda
-// Evita que se duplique el código de Alumno e Instructor
+    // Metodo que se reusa y hereda
+    // Evita que se duplique el código de Alumno e Instructor
 
     void mostrarDatosBasicos() {
 
@@ -66,7 +63,7 @@ public:
         cout << "ID: " << identificador << endl;
     }
 
-// Método virtual puro / clase abstracta 
+// Metodo virtual puro / clase abstracta
 // Convierte a Persona en clase abstracta y obliga a las clases hijas a implementar su propia versión de mostrarInformacion()
 
     virtual void mostrarInformacion() = 0;
