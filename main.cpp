@@ -37,6 +37,7 @@ int main() {
         cout << endl;
     }
 
+
     Pago pagoAlumno;
 
     pagoAlumno.procesarPago(
