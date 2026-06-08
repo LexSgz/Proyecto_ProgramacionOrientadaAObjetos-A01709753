@@ -19,7 +19,7 @@ public:
 
     Alumno(
         string nombrePersona,
-        int edadPersona, 
+        int edadPersona,
         int idPersona, //-
         double deudaAlumno
     )
