@@ -115,12 +115,6 @@ Correr en Windows:
 
 .\estudioDanza.exe
 
-Correr en Linux o Mac:
-
-./hotel
-
 ---
-
-
 
 Proyecto desarrollado como parte del Proyecto Integrador de Programación Orientada a Objetos.
