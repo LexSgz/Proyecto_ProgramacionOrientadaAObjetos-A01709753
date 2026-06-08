@@ -2,6 +2,8 @@
 #define PERSONA_H
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 // Es la clase abstracta base.
