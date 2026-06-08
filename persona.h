@@ -6,6 +6,7 @@ using namespace std;
 
 // Es la clase abstracta base.
 // Aqui se definen los atributos comunes para todas las personas del estudio de danza.
+class persona{
 
 protected:
 
